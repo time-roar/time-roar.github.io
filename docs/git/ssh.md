@@ -13,25 +13,25 @@ git config --global user.email  "xxxxxx@qq.com"
 
 2. 切换到user用户名下的.ssh路径
 
-```sh
+```shell
 cd ～/.ssh
 ```
 
 2. 生成 Rsa key
 
-``` sh
+``` shell
 ssh-keygen -t rsa -C "519451569@qq.com"
 ```
 
 出现下文则表示输入你的ssh_key文件的名称
 
-```sh
+```shell
 Enter file in which to save the key (/c/Users/51945/.ssh/id_rsa): 
 ```
 
 下面则表示输入ssh key密码
 
-```sh
+```shell
 Enter passphrase (empty for no passphrase):
 ```
 
@@ -52,7 +52,7 @@ Enter passphrase (empty for no passphrase):
 
 5. 查验是否配置成功
 
-```sh
+```shell
 ssh git@github.com
 ```
 
@@ -60,61 +60,61 @@ ssh git@github.com
 
 1. 执行ssh key生成命令,有几个账号生成几次 ,配置参考[SSH生成](#SSH生成)
 
-   ```sh
+   ```shell
    ssh-keygen -t rsa -C "你的邮箱"
    ```
 
 2. 执行ssh添加,多个重复执行
 
-   ```sh
+   ```shell
    ssh-add 生成第二步的命名
    ```
 
    如果出现错误,例如:
 
-   ```sh
+   ```shell
    Could not open a connection to your authentication agent.
    ```
 
    请执行以下命令即可解决
 
-   ```sh
+   ```shell
    ssh-agent bash
    ```
 
    执行成功则会提示让你输入密码
 
-   ```sh
+   ```shell
    Enter passphrase for blog:
    ```
 
    密码验证成功后会提示田间成功并返回邮箱
 
-   ```sh
+   ```shell
    Identity added: blog (519451569@qq.com)
    ```
 
 3. 查看是否添加成功
 
-   ```sh
+   ```shell
    ssh-add -l
    ```
 
    如果删除可执行
 
-   ```sh
+   ```shell
    ssh-add -D
    ```
 
 4. 创建config
 
-   ```sh
+   ```shell
    touch config
    ```
 
 5. 在config中添加如下信息
 
-   ```sh
+   ```shell
    Host timeroar.github.com
         HostName github.com
         PreferredAuthentications publickey
@@ -133,33 +133,33 @@ ssh git@github.com
 
 6. 取消全局global-config
 
-   ```sh
+   ```shell
    git config --global --unset user.name
    git config --global --unset user.email
    ```
 
 7. 每个项目需要单独设置用户名邮箱
 
-   ```sh
+   ```shell
    git config  user.email "519451569@qq.com"
    git config  user.name "timeroar"
    ```
 
 8. 查看是否成功,跟上面的有区别
 
-   ```sh
+   ```shell
    ssh -T git@timeroar.github.com
    ```
 
 9. 本地使用时注意修改ssh路径为别名路径如:
 
-   ```sh
+   ```shell
    git@github.com:timeroar/timeroar.github.io.git
    ```
 
    变更为
 
-   ```sh
+   ```shell
    git@timeroar.github.com:timeroar/timeroar.github.io.git
    ```
 
