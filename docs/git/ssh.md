@@ -127,7 +127,7 @@ ssh git@github.com
         IdentityFile ~/.ssh/doc
    ```
 
-   - Host的第一排 则为你的git地址
+   - Host的第一排 则为你的host别名,用于第9步的修改替换
    - 第四排则为你用户邮箱路径
    - 第五排则为你ssh的路径
 
@@ -147,9 +147,19 @@ ssh git@github.com
 
 8. 查看是否成功,跟上面的有区别
 
-```sh
-ssh -T git@timeroar.github.com
-```
+   ```sh
+   ssh -T git@timeroar.github.com
+   ```
 
+9. 本地使用时注意修改ssh路径为别名路径如:
 
+   ```sh
+   git@github.com:timeroar/timeroar.github.io.git
+   ```
+
+   变更为
+
+   ```sh
+   git@timeroar.github.com:timeroar/timeroar.github.io.git
+   ```
 
