@@ -5,6 +5,7 @@
 - [Linux相关](linux/install)
 - [Docker相关](docker/install)
 - [Git相关](git/ssh)
+- [软件安装相关](software/nexus)
 
 ---
 

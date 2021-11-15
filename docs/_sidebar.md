@@ -7,8 +7,11 @@
 * **Docker**
   
   * [Docker安装](docker/install 'Docker安装')
-  
-  **Git**
+  * [Docker常用命令(持续更新)](docker/command 'Docker常用命令')
+* **Git**
   
   * [SSH链接](git/ssh 'git链接,多账户')
+  
+* **软件安装**
+  * [Nexus私服](software/nexus 'Nexus私服')
 
