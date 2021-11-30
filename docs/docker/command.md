@@ -18,11 +18,22 @@
   docker export -o [目标文件] [容器名称]
   ```
 
+- 从容器导入
+
+  ```shell
+  docker import [目标文件] [容器名称]
+  ```
+
 - 从镜像导出
 
   ```shell
   docker save -o [目标文件] [镜像名称]
   ```
 
-  
+- 从镜像导入
 
+  ```shell
+  docker load -i [目标文件]
+  ```
+
+  

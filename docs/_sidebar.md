@@ -3,7 +3,7 @@
 * **Linux**
   
   * [Linux安装](linux/install 'Linux安装')
-  
+  * [Linux常见问题](linux/issue 'Linux常见问题')
 * **Docker**
   
   * [Docker安装](docker/install 'Docker安装')
@@ -11,6 +11,10 @@
 * **Git**
   
   * [SSH链接](git/ssh 'git链接,多账户')
+
+* **数据库**
+
+  * [常见问题](database/issue.md '数据库常见问题')
   
 * **软件安装**
   * [Nexus私服](software/nexus 'Nexus私服')
