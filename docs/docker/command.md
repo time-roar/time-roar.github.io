@@ -36,4 +36,16 @@
   docker load -i [目标文件]
   ```
 
+- 删除镜像
+
+  ```shell
+  docker rmi [镜像id]     //其中doss-api为关键字
+  ```
+
+- 批量删除镜像
+
+  ```shell
+  docker rmi --force `docker images | grep wms | awk '{print $3}'`   //其中wms关键字 print $3就是列出第三列 即镜像id
+  ```
+
   
