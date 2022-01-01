@@ -2,32 +2,32 @@
 
 ## BinLog
 
-### 是否启用binlog日志
+是否启用binlog日志
 ```sql
 show variables like 'log_bin';
 ```
 
-### 查看详细的日志配置信息
+查看详细的日志配置信息
 ```sql
 show global variables like '%log%';
 ```
 
-### 数据存储目录
+数据存储目录
 ```sql
 show variables like '%dir%';
 ```
 
-### 查看binlog的目录
+查看binlog的目录
 ```sql
 show global variables like "%log_bin%";
 ```
 
-### 查看当前服务器使用的biglog文件及大小
+查看当前服务器使用的biglog文件及大小
 ```sql
 show binary logs;
 ```
 
-### 事件查询命令
+事件查询命令
 
 ```sql
 -- IN 'log_name' ：指定要查询的binlog文件名(不指定就是第一个binlog文件)
@@ -37,32 +37,32 @@ show binary logs;
 show binlog events [IN 'log_name'] [FROM pos] [LIMIT [offset,] row_count];
 ```
 
-### 查看 binlog 内容
+查看 binlog 内容
 ```sql
 show binlog events;
 ```
 
-### 查看具体一个binlog文件的内容 （in 后面为binlog的文件名）
+查看具体一个binlog文件的内容 （in 后面为binlog的文件名）
 ```sql
 show binlog events in 'binlog.000038';
 ```
 
-### 设置binlog文件保存事件，过期删除，单位天
+设置binlog文件保存事件，过期删除，单位天
 ```sql
 set global expire_log_days=7; 
 ```
 
-### 删除当前的binlog文件
+删除当前的binlog文件
 ```sql
 reset binlog; 
 ```
 
-### 删除指定日期前的日志索引中binlog日志文件
+删除指定日期前的日志索引中binlog日志文件
 ```sql
 purge master logs before '2021-12-31 14:00:00';
 ```
 
-### 删除指定日志文件
+删除指定日志文件
 ```sql
 purge master logs to 'binlog.000038';
 ```
